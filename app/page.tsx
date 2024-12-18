@@ -16,37 +16,49 @@ export default function Home() {
         <section>
           <h2 className="text-2xl font-bold">What does it all mean?</h2>
           <p>
-            This tool checks various aspects of your password strength.
-            Here&apos;s what each category means:
+            This tool evaluates various aspects of your password strength for
+            you to likely get <b>Pwned</b>. Here&apos;s the explanation of each
+            category:
           </p>
         </section>
         <section>
           <h3 className="text-xl font-semibold">Complexity Check</h3>
           <p>
-            A strong password should be at least 8 characters long and include
-            uppercase letters, numbers, and symbols.
+            This checks if your password meets the explicit specified
+            requirements. In the case of this tool, it&apos;s at least 8
+            characters long, an uppercase letter, a lowercase letter, a number,
+            and a symbol. While this improves the bottom line for entropy, it
+            doesn&apos;t guarantee the password is secure, as demonstrated by
+            using a password like &quot;Password123$&quot;.
           </p>
         </section>
         <section>
-          <h3 className="text-xl font-semibold">Well-Known Password Check</h3>
+          <h3 className="text-xl font-semibold">Guessability</h3>
           <p>
-            This check ensures your password isn&apos;t a commonly used one
-            that&apos;s easily guessable.
+            This evaluates whether your password isn&apos;t one that&apos;s
+            randomly guessable. It does so by pattern matching common used
+            passwords over commonly used names, popular words from Wikipedia,
+            and even keyboard smashes like the good ol&apos;
+            &quot;qwertyui&quot;.
           </p>
         </section>
         <section>
-          <h3 className="text-xl font-semibold">Guessability Rating</h3>
+          <h3 className="text-xl font-semibold">Pattern Matching</h3>
           <p>
-            This rating indicates how easily your password can be guessed.
-            Longer passwords are generally less guessable.
+            This analysis breaks down your password into tokens and identifies
+            patterns like dictionary words, names, dates, or repeated
+            characters. For example, it can detect if you&apos;re using common
+            substitutions like &quot;a&quot; to &quot;@&quot;.
           </p>
         </section>
         <section>
-          <h3 className="text-xl font-semibold">Brute Force Time Estimate</h3>
+          <h3 className="text-xl font-semibold">Estimated Crack Time</h3>
           <p>
-            This estimate shows how long it might take to crack your password
-            using brute force methods. Longer, more complex passwords take
-            longer to crack.
+            This provides an indication of how long it might take to break your
+            password using common brute force methods. It&apos;s important to note that the security of your
+            password also depends on how and where it is stored. Passwords
+            stored in plain text are more vulnerable than those that are
+            hashed and salted, which adds an additional layer of protection.
           </p>
         </section>
 
