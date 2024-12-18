@@ -24,7 +24,7 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, Props>(
           type="button"
           variant={"none"}
           size={"icon"}
-          className="z-10 mx-3 h-fit"
+          className="z-10 mr-3 h-fit"
           onClick={() => setIsPasswordVisible((prevState) => !prevState)}
           aria-label={isPasswordVisible ? "Hide password" : "Show password"}
           aria-pressed={isPasswordVisible}

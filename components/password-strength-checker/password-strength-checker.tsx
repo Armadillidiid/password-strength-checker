@@ -55,7 +55,7 @@ export default function PasswordStrengthChecker() {
   return (
     <>
       <h1 className="text-4xl tracking-tight font-bold mb-4 text-center">
-        Estimate Your Password Strength
+        Check Your Password Strength
       </h1>
       <p className="text-muted-foreground tracking-tight mb-8 text-center">
         Enter your password to see how strong it is.
@@ -74,6 +74,11 @@ export default function PasswordStrengthChecker() {
                 {isSubmitting ? "Checking..." : "Check"}
               </Button>
             </form>
+            <p className="mt-4 mx-auto w-fit items-center flex text-sm text-muted-foreground text-center">
+              <Icons.Info className="size-4 shrink-0 mr-1" />
+              Your password is never saved or transmitted. All checks are
+              performed locally in your browser.
+            </p>
           </CardContent>
         </Card>
 
