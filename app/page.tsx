@@ -1,12 +1,14 @@
-import PasswordStrengthChecker from "@/components/password-strength-checker";
+import PasswordStrengthChecker from "@/components/password-strength-checker/password-strength-checker";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
     <main className="max-w-full py-8 px-4 md:px-0 md:max-w-2xl lg:max-w-4xl min-h-screen flex flex-col justify-center mx-auto">
-      <PasswordStrengthChecker />
+      <main>
+        <PasswordStrengthChecker />
+      </main>
       <Separator className="mt-8 mb-6" />
-      <div className="space-y-6">
+      <footer className="space-y-6">
         <section>
           <h2 className="text-2xl font-bold">What does it all mean?</h2>
           <p>
@@ -43,7 +45,7 @@ export default function Home() {
             longer to crack.
           </p>
         </section>
-      </div>
+      </footer>
     </main>
   );
 }

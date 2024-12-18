@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { Button } from "./button";
+import { Input } from "./input";
 import * as Icons from "lucide-react";
 
-export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
+export type Props = React.InputHTMLAttributes<HTMLInputElement>;
 
 export const PasswordInput = React.forwardRef<HTMLInputElement, Props>(
   (props, ref) => {
