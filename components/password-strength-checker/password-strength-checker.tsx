@@ -44,10 +44,10 @@ export default function PasswordStrengthChecker() {
 
   return (
     <>
-      <h1 className="text-4xl font-bold mb-4 text-center">
+      <h1 className="text-4xl tracking-tight font-bold mb-4 text-center">
         Check Your Password Strength
       </h1>
-      <p className="text-muted-foreground mb-8 text-center">
+      <p className="text-muted-foreground tracking-tight mb-8 text-center">
         Enter your password to see how strong it is.
       </p>
 

@@ -17,8 +17,8 @@ export const StrengthCard = ({
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
-        <CardTitle className="inline-flex items-center text-lg font-bold">
-          <Icon className="size-4 mr-2" />
+        <CardTitle className="inline-flex items-center text-xl font-bold">
+          <Icon className="size-5 mr-2" />
           {title}
         </CardTitle>
       </CardHeader>

@@ -28,7 +28,7 @@ export function ComplexityCheckCard({
                 />
               )}
               <span
-                className={`text-sm ${passed ? "text-emerald-600" : "text-muted-foreground"}`}
+                className={`${passed ? "text-emerald-600" : "text-muted-foreground"}`}
               >
                 {text}
               </span>
