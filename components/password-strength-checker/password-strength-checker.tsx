@@ -25,27 +25,37 @@ export default function PasswordStrengthChecker() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    setIsSubmitting(true);
     e.preventDefault();
+    setIsSubmitting(true);
+
     const formData = new FormData(e.currentTarget);
     const submittedPassword = formData.get("password");
-    if (typeof submittedPassword !== "string") return;
-    if (submittedPassword.trim().length === 0) return;
 
-    const result = await zxcvbnAsync(submittedPassword);
-    console.dir(result, { depth: null });
+    if (
+      typeof submittedPassword !== "string" ||
+      submittedPassword.trim().length === 0
+    ) {
+      setIsSubmitting(false);
+      return;
+    }
 
-    setResult({
-      ...result,
-      complexity: checkComplexity(submittedPassword),
-    });
-    setIsSubmitting(false);
+    try {
+      const result = await zxcvbnAsync(submittedPassword);
+      setResult({
+        ...result,
+        complexity: checkComplexity(submittedPassword),
+      });
+    } catch (error) {
+      console.error("Error during password strength evaluation:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
       <h1 className="text-4xl tracking-tight font-bold mb-4 text-center">
-        Check Your Password Strength
+        Estimate Your Password Strength
       </h1>
       <p className="text-muted-foreground tracking-tight mb-8 text-center">
         Enter your password to see how strong it is.

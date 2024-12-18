@@ -14,7 +14,7 @@ export function GuessabilityCard({ result }: { result: StrengthFormResult }) {
               <div className="text-2xl font-bold">{result.guesses}</div>
             </div>
             <div
-              className={`px-3 py-1 rounded-full text-sm font-medium ${
+              className={`px-3 py-1 rounded-full whitespace-nowrap text-sm font-medium ${
                 result.guessesLog10 < 3
                   ? "bg-red-100 text-red-700"
                   : result.guessesLog10 < 6
