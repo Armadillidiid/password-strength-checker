@@ -55,17 +55,18 @@ export default function Home() {
           <h3 className="text-xl font-semibold">Estimated Crack Time</h3>
           <p>
             This provides an indication of how long it might take to break your
-            password using common brute force methods. It&apos;s important to note that the security of your
-            password also depends on how and where it is stored. Passwords
-            stored in plain text are more vulnerable than those that are
-            hashed and salted, which adds an additional layer of protection.
+            password using common brute force methods. It&apos;s important to
+            note that the security of your password also depends on how and
+            where it is stored. Passwords stored in plain text are more
+            vulnerable than those that are hashed and salted, which adds an
+            additional layer of protection.
           </p>
         </section>
 
         <Separator className="mt-8 mb-6" />
         <section>
           <h2 className="text-2xl font-bold">Resources</h2>
-          <ul>
+          <ul className="space-y-2">
             <li>
               <a
                 href="https://pages.nist.gov/800-63-4/sp800-63b.html#appA"
@@ -78,7 +79,23 @@ export default function Home() {
                 })}
               >
                 <Icons.Circle className="max-h-2 max-w-2 fill-current" />
-                NIST Password Recommendations
+                NIST Special Publication 800-63B: Passwords
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://doi.org/10.1145/1866307.1866327"
+                rel="noopener noreferrer"
+                target="_blank"
+                className={buttonVariants({
+                  variant: "link",
+                  size: "none",
+                  className: "underline whitespace-break-spaces",
+                })}
+              >
+                <Icons.Circle className="max-h-2 max-w-2 fill-current" />
+                Testing Metrics for Password Creation Policies by Attacking
+                Large Sets of Revealed Passwords.
               </a>
             </li>
           </ul>
