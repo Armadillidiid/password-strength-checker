@@ -14,7 +14,7 @@ export default function Home() {
       <Separator className="mt-8 mb-6" />
       <footer className="space-y-6">
         <section>
-          <h2 className="text-2xl font-bold">What does it all mean?</h2>
+          <h2 className="text-2xl font-bold">What does this all mean?</h2>
           <p>
             This tool evaluates various aspects of your password strength for
             you to likely get <b>Pwned</b>. Here&apos;s the explanation of each
@@ -22,7 +22,7 @@ export default function Home() {
           </p>
         </section>
         <section>
-          <h3 className="text-xl font-semibold">Complexity Check</h3>
+          <h3 className="text-xl font-semibold">Complexity Rules</h3>
           <p>
             This checks if your password meets the explicit specified
             requirements. In the case of this tool, it&apos;s at least 8
@@ -43,7 +43,7 @@ export default function Home() {
           </p>
         </section>
         <section>
-          <h3 className="text-xl font-semibold">Pattern Matching</h3>
+          <h3 className="text-xl font-semibold">Pattern Matches</h3>
           <p>
             This analysis breaks down your password into tokens and identifies
             patterns like dictionary words, names, dates, or repeated

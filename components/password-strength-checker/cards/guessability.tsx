@@ -2,6 +2,21 @@ import { StrengthFormResult } from "../password-strength-checker";
 import { StrengthCard } from "../strength-card";
 
 export function GuessabilityCard({ result }: { result: StrengthFormResult }) {
+  function formatLargeNumber(num: number) {
+    if (num >= 1e18) {
+      return `${(num / 1e18).toFixed(1)} Quadrillion`;
+    } else if (num >= 1e15) {
+      return `${(num / 1e15).toFixed(1)} Quadrillion`;
+    } else if (num >= 1e12) {
+      return `${(num / 1e12).toFixed(1)} Trillion`;
+    } else if (num >= 1e9) {
+      return `${(num / 1e9).toFixed(1)} Billion`;
+    } else if (num >= 1e6) {
+      return `${(num / 1e6).toFixed(1)} Million`;
+    } else {
+      return new Intl.NumberFormat().format(num);
+    }
+  }
   return (
     <>
       <StrengthCard icon="Calculator" title="Guessability">
@@ -11,7 +26,9 @@ export function GuessabilityCard({ result }: { result: StrengthFormResult }) {
               <div className="text-sm text-muted-foreground mb-1">
                 Number of guesses needed
               </div>
-              <div className="text-2xl font-bold">{result.guesses}</div>
+              <div className="text-2xl font-bold">
+                {formatLargeNumber(result.guesses)}
+              </div>
             </div>
             <div
               className={`px-3 py-1 rounded-full whitespace-nowrap text-sm font-medium ${

@@ -7,7 +7,7 @@ export const Social = () => {
     <Button
       variant="outline"
       size="default"
-      className={cn("absolute left-3 top-3")}
+      className={cn("fixed left-3 top-3")}
       asChild
     >
       <a

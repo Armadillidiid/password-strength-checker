@@ -10,7 +10,7 @@ export function ComplexityCheckCard({
 }) {
   return (
     <>
-      <StrengthCard icon="SlidersHorizontal" title="Complexity Check">
+      <StrengthCard icon="SlidersHorizontal" title="Complexity Rules">
         <ul>
           {result.complexity.map(({ passed, text }, index) => (
             <li key={index} className="flex items-center gap-2">
